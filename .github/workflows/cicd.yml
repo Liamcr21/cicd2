@@ -1,16 +1,15 @@
-name: cicd
+name: CI/CD
 
 on: [push]
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
-        steps:
-            - run: ls -lah
-            - uses: actions/checkout@v4
-            - run: npm ci
-            - run: npm run build
-            - run: ls-lah
-
-
-# test:
+  build: 
+    runs-on: ubuntu-latest
+    steps:
+      - run: ls -lah
+      - uses: actions/checkout@v4
+      - run: npm ci
+      - run: npm run build
+      - run: ls -lah
+  
+  # test:
