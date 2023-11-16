@@ -1,0 +1,14 @@
+name: cicd
+
+on: [push]
+
+jobs:
+    build:
+        runs-on: unbuntu-latest
+        steps:
+            - run: ls -lah
+            - uses: actions/checkout@v4
+            - run: ls-lah
+
+
+# test:
