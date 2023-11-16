@@ -6,10 +6,18 @@ jobs:
   build: 
     runs-on: ubuntu-latest
     steps:
-      - run: ls -lah
       - uses: actions/checkout@v4
       - run: npm ci
       - run: npm run build
-      - run: ls -lah
   
-  # test:
+  test: 
+    runs-on: ubuntu-latest
+    steps:
+      - run: ls -lah
+      - uses: actions/checkout@v4
+      - name: Cypress run
+        uses: cypress-io/github-action@v6
+        with:
+          build: npm run build
+          start: npm run start
+          browser: chrome
