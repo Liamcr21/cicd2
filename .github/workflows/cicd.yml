@@ -53,7 +53,44 @@ jobs:
     steps:
       - uses: webfactory/ssh-agent@v0.8.0
         with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          ssh-private-key: -----BEGIN OPENSSH PRIVATE KEY-----
+            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
+            -----END OPENSSH PRIVATE KEY-----
       - run: |
           sudo ssh -o StrictHostKeyChecking=no debian@51.178.27.143 "\
           ls -lah && \
