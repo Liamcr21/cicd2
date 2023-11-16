@@ -55,10 +55,9 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - run: |
-          sudo ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "\
+          sudo ssh -o StrictHostKeyChecking=no debinan@51.178.27.143 "\
           ls -lah && \
           cd nws-cicd && \
           git pull && \
           npm ci && \
-          npm run build && \
-          pm2 restart all"
+          npm run build && \"
